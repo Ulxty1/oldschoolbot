@@ -136,6 +136,7 @@ export interface ConstructionActivityTaskOptions extends ActivityTaskOptions {
 
 export interface MonsterActivityTaskOptions extends ActivityTaskOptions {
 	type: 'MonsterKilling';
+	takeEggs?: boolean;
 	mi: number;
 	q: number;
 	iQty?: number;
