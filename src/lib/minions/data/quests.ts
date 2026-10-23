@@ -36,10 +36,31 @@ export enum QuestID {
 	'Scrambled!' = 16,
 	ShadowsOfCustodia = 17,
 	TutorialIsland = 18,
-	AKingdomDivided = 19
+	AKingdomDivided = 19,
+	TheBloodMoonRises = 20
 }
 
 export const quests: Quest[] = [
+	{
+		id: QuestID.TheBloodMoonRises,
+		qp: 4,
+		name: 'The Blood Moon Rises',
+		skillReqs: {
+			slayer: 74,
+			woodcutting: 74,
+			smithing: 72,
+			cooking: 72,
+			fletching: 70,
+			mining: 66,
+			hunter: 65,
+			crafting: 64,
+			herblore: 64,
+			magic: 57
+		},
+		rewards: new Bank().add('Hallowed flail').add('Sunspear').add(33715).freeze(),
+		// Bot duration; OSRS labels this quest Very Long, without a fixed time.
+		calcTime: () => Time.Hour * 3
+	},
 	{
 		id: QuestID.DesertTreasureII,
 		qp: 5,

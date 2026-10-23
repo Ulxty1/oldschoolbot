@@ -28,6 +28,7 @@ import {
 } from './Implings.js';
 import { IntricatePouch } from './IntricatePouch.js';
 import { LarransChest } from './LarransChest.js';
+import { MaggotEggs } from './MaggotEgg.js';
 import { MoonKeyChest } from './MoonKeyChest.js';
 import { MuddyChest } from './MuddyChest.js';
 import { MysteryBox } from './MysteryBox.js';
@@ -87,6 +88,7 @@ export {
 };
 
 const openablesObject: Record<string, SimpleOpenable> = {
+	...Object.fromEntries(MaggotEggs.map(egg => [egg.name, egg])),
 	MysteryBox,
 	NestBoxEmpty,
 	NestBoxRing,
@@ -138,3 +140,4 @@ const Openables: Collection<number, Openable> = Object.assign(new Collection(all
 export default Openables;
 
 export * from './HallowedSack.js';
+export * from './MaggotEgg.js';

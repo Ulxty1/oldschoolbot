@@ -1378,6 +1378,7 @@ export const aerialFishingCL = resolveItems([
 	...ItemGroups.anglerOutfit
 ]);
 export const allPetsCL = resolveItems([
+	'Maggot marquess',
 	'Abyssal orphan',
 	'Ikkle hydra',
 	'Callisto cub',
@@ -2280,3 +2281,5 @@ export const avasDevices: { item: Item; reduction: number }[] = [
 	{ item: Items.getOrThrow("Ava's accumulator"), reduction: 72 },
 	{ item: Items.getOrThrow("Ava's assembler"), reduction: 80 }
 ];
+
+export const maggotKingCL = resolveItems(['Maggot marquess', 'Crimson kisten', 'Elder venator fang']);
